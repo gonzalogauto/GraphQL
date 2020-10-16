@@ -1,0 +1,24 @@
+{
+    "comentarios":[
+        {
+            "usuario":"Gonzalo",
+            "mensaje":"Hola!"
+        },
+        {
+            "usuario":"Marie",
+            "mensaje":"Como va?"
+        },
+        {
+            "usuario":"Lucia",
+            "mensaje":"Acá estoy."
+        },
+        {
+            "usuario":"Maria",
+            "mensaje":"Holaa!!!"
+        },
+        {
+            "usuario":"Chris",
+            "mensaje":"Que hacen por ahí?"
+        }
+    ]
+}
