@@ -1,24 +1,24 @@
 {
-    "comentarios":[
+    "comentarios": [
         {
-            "usuario":"Gonzalo",
-            "mensaje":"Hola!"
+            "usuario": "Gonzalo",
+            "mensaje": "Hola!"
         },
         {
-            "usuario":"Marie",
-            "mensaje":"Como va?"
+            "usuario": "Marie",
+            "mensaje": "Como va?"
         },
         {
-            "usuario":"Lucia",
-            "mensaje":"Acá estoy."
+            "usuario": "Lucia",
+            "mensaje": "Acá estoy."
         },
         {
-            "usuario":"Maria",
-            "mensaje":"Holaa!!!"
+            "usuario": "Maria",
+            "mensaje": "Holaa!!!"
         },
         {
-            "usuario":"Chris",
-            "mensaje":"Que hacen por ahí?"
+            "usuario": "Gonzalo",
+            "mensaje": "Que hacen por ahí?"
         }
     ]
 }
