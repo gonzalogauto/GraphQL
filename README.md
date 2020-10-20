@@ -4,10 +4,10 @@ Consulta simple usando GraphQL
 
 ### Pasos:
 
-- Instalar dependencias
+- Instalar dependencias.
 ```sh
 npm install
 ```
-- Crear Schema
-- Crear Resolver
-- Crear consultas a realizar
+- Crear Schema.
+- Crear Resolver.
+- Crear consultas a realizar.
