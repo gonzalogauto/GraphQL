@@ -3,7 +3,7 @@
 Consulta simple usando GraphQL
 
 ### Pasos:
-- ```sh
+```sh
 npm i graphql --save
 ```
 - Crear Schema
