@@ -2,23 +2,28 @@
     "comentarios": [
         {
             "usuario": "Gonzalo",
-            "mensaje": "Hola!"
+            "mensaje": "Hola!",
+            "fecha":"12/10/2020"
         },
         {
             "usuario": "Marie",
-            "mensaje": "Como va?"
+            "mensaje": "Como va?",
+            "fecha":"12/10/2020"
         },
         {
             "usuario": "Lucia",
-            "mensaje": "Acá estoy."
+            "mensaje": "Acá estoy.",
+            "fecha":"12/10/2020"
         },
         {
             "usuario": "Maria",
-            "mensaje": "Holaa!!!"
+            "mensaje": "Holaa!!!",
+            "fecha":"12/10/2020"
         },
         {
             "usuario": "Gonzalo",
-            "mensaje": "Que hacen por ahí?"
+            "mensaje": "Que hacen por ahí?",
+            "fecha":"12/10/2020"
         }
     ]
 }
