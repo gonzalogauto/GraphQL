@@ -3,8 +3,10 @@
 Consulta simple usando GraphQL
 
 ### Pasos:
+
+- Instalar dependencias
 ```sh
-npm i graphql --save
+npm install
 ```
 - Crear Schema
 - Crear Resolver
