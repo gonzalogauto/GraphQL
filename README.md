@@ -9,3 +9,8 @@ Consultas con GraphQL sobre la API de Dragonfish Color y Talle.
 - Crear Schema.
 - Crear Resolver.
 - Crear consultas a realizar.
+
+### Querys disponibles:
+
+- Consultar clientes.
+- Consultar facturas manuales.
