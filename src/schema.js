@@ -2,7 +2,7 @@ const graphql = require('graphql-tools');
 const { resolvers } = require('./resolvers');
 const typeDefs = `
   type Query {
-    facturasmanuales(limit: Int): Response
+    facturasmanuales: Response
   }
 
   type Response {
