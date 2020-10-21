@@ -6,9 +6,9 @@ Consultas con GraphQL sobre la API de Dragonfish Color y Talle.
 
 - Clonar repositorio.
 - Instalar dependencias con "npm install".
-- Crear Schema.
-- Crear Resolver.
-- Crear consultas a realizar.
+- Actualizar Schema y Resolver en caso de ser necesario.
+- Ejecutar el comando "npm run start" para iniciar el servidor local.
+- Ingresar en http://localhost:8008/graphql para hacer las consultas necesarias.
 
 ### Querys disponibles:
 
