@@ -1,4 +1,3 @@
-const { response } = require('express');
 const graphql = require('graphql-tools');
 const gql = require('graphql-tag');
 const { resolvers } = require('./resolvers');
