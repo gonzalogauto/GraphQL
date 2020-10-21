@@ -1,7 +1,6 @@
-# Repositorio de test sobre GraphQL
+# GraphQL + API Dragonfish Color y Talle
 
 Consultas con GraphQL sobre la API de Dragonfish Color y Talle.
-
 
 ### Pasos:
 
