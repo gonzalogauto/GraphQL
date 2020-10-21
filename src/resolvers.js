@@ -1,4 +1,3 @@
-const { comentarios } = require('../data.json');
 const axios = require('axios').default;
 module.exports ={
     resolvers:{ 
@@ -10,7 +9,7 @@ module.exports ={
                         "IdCliente":process.env.ID_CLIENTE,
                         "Authorization":process.env.API_TOKEN
                     }
-                    const resp = await axios.get(process.env.HOST_URI+"Factura/?limit=10", {
+                    const resp = await axios.get(process.env.HOST_URI+"Factura", {
                         headers: head
                     });
                     //console.log(resp.data);
