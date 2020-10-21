@@ -1,6 +1,10 @@
+const { response } = require('express');
 const graphql = require('graphql-tools');
+const gql = require('graphql-tag');
 const { resolvers } = require('./resolvers');
-const typeDefs = `
+
+
+const typeDefs = gql`
   type Query {
     facturasmanuales: ResponseFacturas
     clientes: ResponseClientes
