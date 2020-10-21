@@ -2,17 +2,18 @@ const graphql = require('graphql-tools');
 const { resolvers } = require('./resolvers');
 const typeDefs = `
   type Query {
-    facturasmanuales: Response
+    facturasmanuales: ResponseFacturas
+    clientes: ResponseClientes
   }
 
-  type Response {
+  type ResponseFacturas {
     CountResultado: Int,
     Siguiente: Int,
     TotalRegistros: Int,
-    Resultados: [Resultados]
+    Resultados: [ResultadosFact]
   }
   
-  type Resultados {
+  type ResultadosFact {
     InformacionAdicional: InformacionAdicional,
     AjustesPorRedondeos: Int,
     ArticulosSeniadosDetalle: [String],
@@ -49,6 +50,73 @@ const typeDefs = `
     ValoresDetalle: [ValoresDetalle],
     Vendedor: String,
     VueltoVirtual: Int
+  }
+
+  type ResultadosClientes { 
+    Apellido: String
+    CUIT: String
+    Calle: String
+    CategCli: String
+    Clasificacion: String
+    CodNombreFantasia: String
+    Codigo: String
+    CodigoPostal: String
+    CodigoSiprib: String
+    CondicionDePago: String
+    CuitPais: String
+    Departamento: String
+    DescuentoPreferente: String
+    EMail: String
+    EstadoCivil: String
+    ExcluidoPercepcionGanancias: Boolean
+    ExcluidoPercepcionIVA: Boolean
+    Fax: String
+    FechaNacimiento: String
+    Hijos: Int
+    Imagen: String
+    InactivoFW: Boolean
+    ListaDePrecio: String
+    Localidad: String
+    Movil: String
+    Nombre: String
+    NroDocumento: String
+    NroIIBB: Int
+    Numero: Int
+    Observacion: String
+    PaginaWeb: String
+    Pais: String
+    PercepcionGanancias: String
+    PercepcionIva: String
+    Piso: String
+    PrimerNombre: String
+    Provincia: String
+    RUT: String
+    RecomendadoPor: String
+    SegundoNombre: String
+    Sexo: String
+    SituacionFiscal: Int
+    SituacionGanancias: Int
+    SujetoVinculado: Boolean
+    Telefono: String
+    TipoCli: String
+    TipoConvenio: Int
+    TipoDocumento: String
+    TopeCtaCte: Int
+    Transportista: String
+    Vendedor: String
+    VigenciaHastaGan: String
+    VigenciaHastaIva: String
+    idglobal: String
+    Percepciones: [String ]
+    OtrasDirecciones: [String ]
+    Contacto: [String ]
+    InformacionAdicional: InformacionAdicional }
+  
+  type ResponseClientes { 
+    CountResultado: Int
+    Siguiente: String
+    TotalRegistros: Int
+    Resultados: [ResultadosClientes] 
   }
 
   type InformacionAdicional {
