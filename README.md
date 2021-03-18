@@ -27,3 +27,5 @@ Pasos a seguir:
 
 - Consultar clientes.
 - Consultar facturas manuales.
+- Consultar articulos.
+- Consultar stock y precios de articulos.
