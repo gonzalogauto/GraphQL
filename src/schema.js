@@ -7,8 +7,11 @@ const typeDefs = gql`
   type Query {
     facturasmanuales: ResponseFacturas
     clientes: ResponseClientes
+    stockyprecios:ResponseConsulta
+    articulos(codigo:String):ResponseArticulos
   }
 
+  # SCHEMA PARA CONSULTAR FACTURAS MANUALES
   type ResponseFacturas {
     CountResultado: Int,
     Siguiente: Int,
@@ -53,6 +56,53 @@ const typeDefs = gql`
     ValoresDetalle: [ValoresDetalle],
     Vendedor: String,
     VueltoVirtual: Int
+  }
+
+  type ImpuestosDetalle {
+      Codigo: String,
+      MontoDeImpuestoInterno: Int,
+      MontoDeImpuestoInternoSinDescuento: Int,
+      MontoDeIva: Int,
+      MontoDeIvaSinDescuento: Int,
+      MontoNoGravado: Int,
+      MontoNoGravadoSinDescuento: Int,
+      NroItem: Int,
+      PorcentajeDeIva: Int
+  }
+  type FacturaDetalle {
+        Articulo: String,
+        Codigo: String,
+        ArticuloDetalle: String,
+        Color: String,
+        ColorDetalle: String,
+        Talle: String,
+        Cantidad: Int,
+        Precio: Int,
+        Descuento: Int,
+        MontoDescuento: Int,
+        Monto: Int,
+        NroItem: Int
+  }
+
+  type ValoresDetalle {
+    Codigo: String,
+    Valor: String,
+    ValorDetalle: String,
+    Fecha: String,
+    NumeroInterno:Int,
+    Monto: Int,
+    PorcentajeDesRec: Int,
+    MontoDesRec: Int,
+    Recibido: Int,
+    NroItem: Int
+  }
+
+  # SCHEMA PARA CONSULTAR CLIENTES
+  type ResponseClientes { 
+    CountResultado: Int
+    Siguiente: String
+    TotalRegistros: Int
+    Resultados: [ResultadosClientes] 
   }
 
   type ResultadosClientes { 
@@ -113,15 +163,80 @@ const typeDefs = gql`
     Percepciones: [String ]
     OtrasDirecciones: [String ]
     Contacto: [String ]
-    InformacionAdicional: InformacionAdicional }
+    InformacionAdicional: InformacionAdicional 
+  }
   
-  type ResponseClientes { 
-    CountResultado: Int
+  # SCHEMA PARA CONSULTAR ARTICULOS
+  type ResponseArticulos {
     Siguiente: String
     TotalRegistros: Int
-    Resultados: [ResultadosClientes] 
+    CountResultado: Int
+    Resultados: [ResultadosArticulos]
+  }
+  type ResultadosArticulos {
+    Codigo: String
+    Descripcion: String
+    DescripcionAdicional: String
+    Comportamiento: Int
+    TipoAgrupamientoPublicaciones: Int
+    Observacion: String
+    NoPermiteDevoluciones: Boolean
+    RestringirDescuentos: Boolean
+    RequiereCCosto: Int
+    NoPublicarEnEcommerce: Boolean
+    SoloPromoYKit: Boolean
+    Proveedor: String
+    UnidadDeMedida: String
+    Temporada: String
+    Ano: Int
+    Familia: String
+    Material: String
+    Linea: String
+    Grupo: String
+    CategoriaDeArticulo: String
+    Clasificacion: String
+    TipodeArticulo: String
+    Imagen: String
+    CondicionIvaVentas: Int
+    PorcentajeIvaVentas: Int
+    CondicionIvaCompras: Int
+    PorcentajeIvaCompras: Int
+    PorcentajeImpuestoInterno: Int
+    Nomenclador: String
+    Paletadecolores: String
+    Curvadetalles: String
+    NoComercializable: String
+    Importado: Boolean
+    ImprimeDespacho: Boolean
+    DescEcommerce: String
+    DescEcommerceHTML: String
+    Peso: Int
+    Largo: Int
+    Ancho: Int
+    Alto: Int
+    InformacionAdicional: [InformacionAdicional]
+    ParticipantesDetalle: [ParticipantesDetalle]
+    Agrupublidetalle: [Agrupublidetalle]
+  }
+    type ParticipantesDetalle {
+    Codigo: String
+    Articulo: String
+    ArticuloDetalle: String
+    Color: String
+    ColorDetalle: String
+    Talle: String
+    Cantidad: Int
+    NroItem: Int
   }
 
+  type Agrupublidetalle {
+    Codigo: String
+    Agrupamiento: String
+    AgrupamientoDetalle: String
+    NroItem: Int
+  }
+
+  # SCHEMAS DE USO GLOBAL
   type InformacionAdicional {
     BaseDeDatosAltaFW: String,
     BaseDeDatosModificacionFW: String,
@@ -144,52 +259,45 @@ const typeDefs = gql`
     ZADSFW: String
   }
 
-  type ImpuestosDetalle {
-      Codigo: String,
-      MontoDeImpuestoInterno: Int,
-      MontoDeImpuestoInternoSinDescuento: Int,
-      MontoDeIva: Int,
-      MontoDeIvaSinDescuento: Int,
-      MontoNoGravado: Int,
-      MontoNoGravadoSinDescuento: Int,
-      NroItem: Int,
-      PorcentajeDeIva: Int
+  
+  # SCHEMA PARA CONSULTA DE STOCK Y PRECIOS
+  type ResponseConsulta {
+    CountResultado: Int,
+    Siguiente: String,
+    TotalRegistros: Int,
+    Resultados: [ResultadosConsulta]
   }
-  type FacturaDetalle {
-        Articulo: String,
-        Codigo: String,
-        ArticuloDetalle: String,
-        Color: String,
-        ColorDetalle: String,
-        Talle: String,
-        Cantidad: Int,
-        Precio: Int,
-        Descuento: Int,
-        MontoDescuento: Int,
-        Monto: Int,
-        NroItem: Int
+  
+  type ResultadosConsulta{
+      Articulo: String,
+      ArticuloDescripcion: String,
+      ArticuloDescripcionAdicional: String,
+      Color: String,
+      ColorDescripcion: String,
+      OrdenPorColor: String,
+      Talle: String,
+      TalleDescripcion: String,
+      OrdenPorTalle: String,
+      Precio: Int,
+      Stock:Int,
+      Comprometido:Int,
+      PendienteEntrega: Int,
+      Disponible: Int,
+      Lista: String,
+      Precios: [PreciosListas]
   }
-
-  type ValoresDetalle {
-    Codigo: String,
-    Valor: String,
-    ValorDetalle: String,
-    Fecha: String,
-    NumeroInterno:Int,
-    Monto: Int,
-    PorcentajeDesRec: Int,
-    MontoDesRec: Int,
-    Recibido: Int,
-    NroItem: Int
+  type PreciosListas{
+      Lista: String,
+      Precio: Int,    
   }
 `;
 
 
 
 
-module.exports ={
-    schema:graphql.makeExecutableSchema({
-        typeDefs,
-        resolvers,
-    })
+module.exports = {
+  schema: graphql.makeExecutableSchema({
+    typeDefs,
+    resolvers,
+  })
 }
