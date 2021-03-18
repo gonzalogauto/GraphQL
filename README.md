@@ -2,14 +2,26 @@
 
 Consultas con GraphQL sobre la API de Dragonfish Color y Talle.
 
-### Pasos:
+## 🚀 Pasos para empezar
 
-- Clonar repositorio.
-- Instalar dependencias con "npm install".
-- Actualizar Schema y Resolver en caso de ser necesario.
-- Crear las variables de entorno PORT, ID_CLIENTE, API_TOKEN y HOST_URI con sus respectivos valores.
-- Ejecutar el comando "npm run start" para iniciar el servidor local.
-- Ingresar en http://localhost:8008/graphql para hacer las consultas necesarias.
+Pasos a seguir:
+
+1. **Clonar repositorio.**
+
+2. **Instalar dependencias.**
+   ```shell
+   npm install
+   ```
+3. **Actualizar Schema y Resolver en caso de ser necesario.**
+
+4. **Crear las variables de entorno PORT, ID_CLIENTE, API_TOKEN y HOST_URI con sus respectivos valores.**
+
+5. **Iniciar el servicio de GraphQL.**
+   ```shell
+   npm run start
+   ```
+6. **Ingresar en `http://localhost:PORT` para hacer las consultas necesarias.**
+
 
 ### Querys disponibles:
 
