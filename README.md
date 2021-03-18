@@ -4,7 +4,7 @@ Consultas con GraphQL sobre la API de Dragonfish Color y Talle.
 
 ## 🚀 Pasos para empezar
 
-Pasos a seguir:
+Para poder hacer uso del servicio se deben realizar los siguientes pasos:
 
 1. **Clonar repositorio.**
 
