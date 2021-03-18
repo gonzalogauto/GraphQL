@@ -68,7 +68,7 @@ module.exports ={
                     }
                     if (argument.codigo!=null) {
                         console.log("hay info")
-                        const resp = await axios.get(process.env.HOST_URI+"Articulo?query="+argument.codigo, {
+                        const resp = await axios.get(process.env.HOST_URI+`Articulo?query=${argument.codigo}`, {
                             headers: head
                         });
                         return resp.data;
